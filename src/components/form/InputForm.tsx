@@ -1,3 +1,5 @@
+import Button from "@material-ui/core/Button";
+import Input from '@material-ui/core/Input';
 import {Form, Formik} from "formik";
 import * as React from "react";
 
@@ -28,13 +30,16 @@ class InputForm extends React.Component<{}, IState> {
           {({values, handleSubmit, handleChange}) => (
             <>
               <Form>
-                <input
+                <Input
                   name="inputValue"
                   type="text"
                   onChange={handleChange}
                   placeholder="文字列を入力"
                 />
-                <button type="submit" onSubmit={() => handleSubmit}>submit</button>
+                <Button
+                  variant="contained"
+                  color="primary"
+                  onSubmit={() => handleSubmit}>submit</Button>
               </Form>
             </>
           )}
